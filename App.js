@@ -3,11 +3,9 @@ import {
   
   StyleSheet,  
   Text,
-  TextInput, 
   View
 } from 'react-native';
 import { Header, Card, Button, ButtonImage } from './src/components/common';
-import LibraryList from './src/components/libraryList'    
 
 
 export default class App extends Component{
@@ -23,10 +21,6 @@ export default class App extends Component{
     this.setState({ inputArr });
   }
 
-  clearInput(){
-    this.setState({ inputArr: [] })
-  }
-
   back(){
     let { inputArr } = this.state;
 
@@ -34,6 +28,10 @@ export default class App extends Component{
     this.setState({ inputArr });
   }
 
+  clearInput(){
+    this.setState({ inputArr: [] })
+  }
+  
   caculate(){
     let { inputArr } = this.state;
 
